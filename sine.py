@@ -8,9 +8,9 @@ amp = 0.995     # exponentially increasing amplitude
 #amp = 1.005    # exponentially decreasing amplitude
 freq = 137      # a lovely frequency for a 1000 long array
 
-sine = [0,0] # initialized to ease indexing
+sine = [0,0]    # initialized to ease indexing
 
-for i in range(1,len(dirac)-2):
+for i in range(1,len(dirac)):
     sine.append((amp*math.sin(2*3.14159*freq)*dirac[i] - sine[i-1] + 2*amp*math.cos(2*3.141459*freq)*sine[i]) / amp**2)
 
 
