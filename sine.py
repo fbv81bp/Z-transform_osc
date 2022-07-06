@@ -11,6 +11,7 @@ freq = 137      # a lovely frequency for a 1000 long array
 sine = [0,0]    # initialized to ease indexing
 
 for i in range(1,len(dirac)):
+    # Z-transform based difference equation of a sine wave
     sine.append((amp*math.sin(2*3.14159*freq)*dirac[i] - sine[i-1] + 2*amp*math.cos(2*3.14159*freq)*sine[i]) / amp**2)
 
 
